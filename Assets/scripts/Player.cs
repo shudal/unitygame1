@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     public Transform player;
 
     private Rigidbody2D playerR;
@@ -27,9 +30,16 @@ public class Player : MonoBehaviour
     
     public static bool lay = false;
 
-    public int yForce = 1300;
+    public int yForce = 700;
 
     public string[] directions;
+
+    public bool isGameOver = false;
+    public Text scoreText;
+    public int score = 0;
+
+    public GameObject gameOver;
+    
 
     private void IsGround()
     {
@@ -60,10 +70,16 @@ public class Player : MonoBehaviour
     {
         if (isgroud)
         {
-            anim.SetBool("jump", false);
+            if (anim.GetBool("jump"))
+            {
+                anim.SetBool("jump", false);
+            }
         } else
         {
-            anim.SetBool("jump", true);
+            if (!anim.GetBool("jump"))
+            {
+                anim.SetBool("jump", true);
+            }
         }
     }
 
@@ -82,11 +98,15 @@ public class Player : MonoBehaviour
     }
 
     public void Jump()
-    { 
+    {
+        playerR.velocity = Vector2.zero;
+        playerR.AddForce(Vector2.up * yForce);
+        /*
         if (isgroud)
         {
             playerR.AddForce(Vector2.up * yForce); 
         }
+        */
     } 
 
     public void MoveHor(int direction2)
@@ -136,6 +156,39 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Score()
+    {
+        if (!isGameOver)
+        {
+            score++;
+            scoreText.text = "分数：" + score;
+        }
+    }
+
+    void Die()
+    {
+        Instance.isGameOver = true;
+        gameOver.SetActive(true);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { 
+        if (collision.collider.tag == "death")
+        {
+            Player.Instance.isGameOver = true;
+        }
+    }
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
+        player_hor_face = 1;
+    }
+
     void Start()
     {
         groundCheck = player.Find("detect_ground_1");
@@ -170,6 +223,11 @@ public class Player : MonoBehaviour
         {
             player.transform.Translate(direction * m_times * Time.deltaTime, 0, 0); ;
 
+        }
+
+        if (isGameOver)
+        {
+            Die();
         }
     }
 }

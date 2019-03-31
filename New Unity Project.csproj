@@ -644,9 +644,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\move.cs" />
-    <Compile Include="Assets\scripts\ButtonMove.cs" />
-    <Compile Include="Assets\scripts\JoyStick.cs" />
+    <Compile Include="Assets\scripts\common\goHome.cs" />
     <Compile Include="Assets\scripts\Player.cs" />
+    <Compile Include="Assets\scripts\SceneMain\ColumnPool.cs" />
+    <Compile Include="Assets\scripts\SceneMain\crushDeath.cs" />
+    <Compile Include="Assets\scripts\SceneMain\getScore.cs" />
+    <Compile Include="Assets\scripts\SceneMain\Repeat.cs" />
+    <Compile Include="Assets\scripts\SceneMain\RestartGame.cs" />
+    <Compile Include="Assets\scripts\SceneMain\Scrolling.cs" />
+    <Compile Include="Assets\scripts\SceneMain\upload.cs" />
+    <Compile Include="Assets\scripts\SceneMain\UploadGrades.cs" />
+    <Compile Include="Assets\scripts\SceneMain\uploadReturn.cs" />
+    <Compile Include="Assets\scripts\Start\StartGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
