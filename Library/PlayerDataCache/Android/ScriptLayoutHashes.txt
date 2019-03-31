@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-E:/game/unity/1.apk
+E:/game/h3
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Main.unity
@@ -121,8 +121,10 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 a318a82d5abde553e75543c7b3aba918 XiaomiSupport.dll:AppStoresSupport.AppStoreSettings
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+7d97fb4d24ca3e415f1aa24d9a284e32 Assembly-CSharp.dll:.UploadGrades
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
+4b1a0c279bb087b64766c164ea324502 Assembly-CSharp.dll:.uploadReturn
 36a9618c1a352c4916548052460abccd Assembly-CSharp.dll:.goHome
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.getScore
@@ -170,5 +172,6 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 4b1a0c279bb087b64766c164ea324502 Assembly-CSharp.dll:.upload
-9f45989cd53b0a1d87de98743c186b4d Assembly-CSharp.dll:.UploadGrades
-4b1a0c279bb087b64766c164ea324502 Assembly-CSharp.dll:.uploadReturn
+31cbb36aa71733cec222405fb0073251 Assembly-CSharp.dll:.alertPanelReturn
+edaba580c67d620ee645eef11149a47e Assembly-CSharp.dll:.Scores
+959552eb987605b19f9d4c785e1776fe Assembly-CSharp.dll:.getRankList
